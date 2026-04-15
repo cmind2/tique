@@ -10,21 +10,27 @@
 </html>
 
 <!-- ══════════════════════════════════════════════════════════════════════
-     STYLES
+     STYLES — THÈME VERT
      ══════════════════════════════════════════════════════════════════════ -->
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --b50: #E6F1FB; --b100: #B5D4F4; --b200: #85B7EB;
-  --b400: #378ADD; --b600: #185FA5; --b800: #0C447C; --b900: #042C53;
-  --g50: #EAF3DE; --g600: #3B6D11; --g800: #27500A;
+  /* Palette verte principale */
+  --b50:  #E8F5E9; --b100: #C8E6C9; --b200: #A5D6A7;
+  --b400: #4CAF50; --b600: #2E7D32; --b800: #1B5E20; --b900: #0A3D0A;
+  /* Succès (vert clair) */
+  --g50:  #F1F8E9; --g600: #558B2F; --g800: #33691E;
+  /* Ambre */
   --am50: #FAEEDA; --am600: #854F0B;
-  --r50: #FCEBEB; --r600: #A32D2D;
+  /* Rouge */
+  --r50:  #FCEBEB; --r600: #A32D2D;
+  /* Gris */
   --gr50: #F1EFE8; --gr200: #B4B2A9; --gr600: #5F5E5A;
-  --primary: #2D9CDB; --primary-dark: #1B6CA8;
-  --secondary: #6FCF97;
-  --bg: #f0f4f8; --card: #ffffff;
+  /* Primaires */
+  --primary: #43A047; --primary-dark: #2E7D32;
+  --secondary: #81C784;
+  --bg: #F1F8F1; --card: #ffffff;
 }
 
 body {
@@ -86,7 +92,7 @@ body {
   width: 100%; max-width: 340px;
 }
 .tabs {
-  display: flex; background: #f0f4f8; border-radius: 10px;
+  display: flex; background: #f0f8f0; border-radius: 10px;
   padding: 3px; gap: 3px; margin-bottom: 1.25rem;
 }
 .tab {
@@ -106,8 +112,8 @@ body {
   text-transform: uppercase; letter-spacing: 0.4px;
 }
 .fld input {
-  width: 100%; padding: 10px 13px; border: 1px solid #dde4ee;
-  border-radius: 10px; font-size: 14px; background: #f8fafc;
+  width: 100%; padding: 10px 13px; border: 1px solid #c8e6c9;
+  border-radius: 10px; font-size: 14px; background: #f8fcf8;
   color: #111; outline: none;
 }
 .fld input:focus     { border-color: var(--b400); background: #fff; }
@@ -142,7 +148,7 @@ body {
 }
 .act-info div {
   display: flex; justify-content: space-between;
-  padding: 5px 0; border-bottom: 1px solid #dde4ee;
+  padding: 5px 0; border-bottom: 1px solid #c8e6c9;
 }
 .act-info div:last-child { border-bottom: none; }
 
@@ -157,7 +163,7 @@ body {
 .btn-main:disabled { background: #b0b8c9; cursor: not-allowed; opacity: 0.85; }
 .btn-sec {
   width: 100%; margin-top: 8px; padding: 11px; background: none;
-  border: 1px solid #dde4ee; border-radius: 12px;
+  border: 1px solid #c8e6c9; border-radius: 12px;
   cursor: pointer; font-size: 13px; color: var(--gr600);
 }
 
@@ -230,7 +236,7 @@ body {
   gap: 8px; margin-bottom: 14px;
 }
 .stat {
-  background: #fff; border: 1px solid #e2eaf4;
+  background: #fff; border: 1px solid #c8e6c9;
   border-radius: 12px; padding: 12px;
 }
 .stat .lbl { font-size: 11px; color: var(--gr600); margin-bottom: 4px; }
@@ -248,12 +254,12 @@ body {
 
 /* ── Cards & Rows ── */
 .card {
-  background: #fff; border: 1px solid #e2eaf4;
+  background: #fff; border: 1px solid #c8e6c9;
   border-radius: 14px; padding: 0 14px; margin-bottom: 12px;
 }
 .row {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 11px 0; border-bottom: 1px solid #f0f4f8; font-size: 13px;
+  padding: 11px 0; border-bottom: 1px solid #f0f8f0; font-size: 13px;
 }
 .row:last-child { border-bottom: none; }
 .row-sub  { font-size: 11px; color: var(--gr600); margin-top: 2px; }
@@ -261,7 +267,7 @@ body {
 
 /* ── Tasks ── */
 .task {
-  background: #fff; border: 1px solid #e2eaf4; border-radius: 14px;
+  background: #fff; border: 1px solid #c8e6c9; border-radius: 14px;
   padding: 12px 14px; margin-bottom: 8px;
   display: flex; align-items: center; gap: 12px; cursor: pointer;
 }
@@ -272,13 +278,13 @@ body {
 .task-title       { font-size: 14px; font-weight: 600; color: #111; }
 .task-desc        { font-size: 12px; color: var(--gr600); margin-top: 2px; }
 .task-rew         { font-size: 13px; font-weight: 700; color: var(--b600); white-space: nowrap; }
-.pbar             { background: #e8eff8; border-radius: 4px; height: 5px; margin-top: 6px; }
+.pbar             { background: #e8f5e8; border-radius: 4px; height: 5px; margin-top: 6px; }
 .pfill            { background: var(--b400); border-radius: 4px; height: 5px; }
 
 /* ── Bottom Nav ── */
 .bnav {
   position: sticky; bottom: 0; background: #fff;
-  border-top: 1px solid #e2eaf4; display: flex;
+  border-top: 1px solid #c8e6c9; display: flex;
   padding: 6px 0 2px; z-index: 50; flex-shrink: 0;
 }
 .ni {
@@ -293,7 +299,7 @@ body {
 /* ── Modals / Overlays ── */
 .moverlay {
   display: none; position: absolute; inset: 0;
-  background: rgba(4,44,83,0.55); z-index: 200; align-items: flex-end;
+  background: rgba(10,61,10,0.55); z-index: 200; align-items: flex-end;
 }
 .moverlay.on { display: flex; }
 .mbox {
@@ -301,7 +307,7 @@ body {
   width: 100%; padding: 1.5rem; max-height: 90vh; overflow-y: auto;
 }
 .mhandle {
-  width: 36px; height: 4px; background: #dde4ee;
+  width: 36px; height: 4px; background: #c8e6c9;
   border-radius: 2px; margin: 0 auto 1.25rem;
 }
 .mtitle { font-size: 17px; font-weight: 700; color: var(--b800); margin-bottom: 1.25rem; }
@@ -309,10 +315,10 @@ body {
 .step.on  { display: block; }
 
 /* ── Info / Success boxes ── */
-.info-box { background: #f8fafc; border-radius: 12px; padding: 12px; margin-bottom: 14px; }
+.info-box { background: #f8fcf8; border-radius: 12px; padding: 12px; margin-bottom: 14px; }
 .i-row {
   display: flex; justify-content: space-between;
-  padding: 7px 0; border-bottom: 1px solid #eef2f8; font-size: 13px;
+  padding: 7px 0; border-bottom: 1px solid #e8f5e8; font-size: 13px;
 }
 .i-row:last-child { border-bottom: none; }
 .i-lbl { color: var(--gr600); }
@@ -336,7 +342,7 @@ body {
 
 /* ── USSD box ── */
 .ussd-box {
-  background: #042C53; border-radius: 14px; padding: 16px; margin-bottom: 16px;
+  background: var(--b900); border-radius: 14px; padding: 16px; margin-bottom: 16px;
 }
 .ussd-title {
   color: var(--b100); font-size: 11px; font-weight: 600;
@@ -349,7 +355,7 @@ body {
   font-family: monospace; font-weight: 700; font-size: 14px;
 }
 .ussd-timer-wrap { margin: 16px 0 8px; text-align: center; }
-.ussd-timer      { font-size: 42px; font-weight: 900; color: #FFCC00; letter-spacing: -2px; }
+.ussd-timer      { font-size: 42px; font-weight: 900; color: #AAFF55; letter-spacing: -2px; }
 .ussd-timer-lbl  { font-size: 11px; color: var(--b200); margin-top: 4px; }
 
 /* ── Badges spéciaux ── */
@@ -360,7 +366,7 @@ body {
 }
 .lvl-badge {
   display: inline-flex; align-items: center; gap: 5px;
-  background: var(--b50); border: 1px solid #c8ddf5;
+  background: var(--b50); border: 1px solid #a5d6a7;
   border-radius: 20px; padding: 3px 10px;
   font-size: 12px; color: var(--b800); font-weight: 600;
 }
@@ -380,14 +386,25 @@ body {
   font-size: 14px; display: inline-block;
 }
 
+/* ── Bannière boutique non-activé ── */
+.shop-notice {
+  background: linear-gradient(135deg, var(--b50), #E8F5E9);
+  border: 1px solid var(--b200); border-radius: 14px;
+  padding: 14px; margin-bottom: 16px;
+  display: flex; align-items: flex-start; gap: 10px; font-size: 13px;
+  color: var(--b800);
+}
+.shop-notice .sn-ico { font-size: 22px; flex-shrink: 0; }
+.shop-notice strong { display: block; font-size: 14px; margin-bottom: 3px; }
+
 /* ── Arbre parrainage ── */
 .tree-node {
-  background: var(--b50); border: 1px solid #c8ddf5; border-radius: 12px;
+  background: var(--b50); border: 1px solid #a5d6a7; border-radius: 12px;
   padding: 10px 13px; margin-bottom: 6px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .tree-indent {
-  margin-left: 20px; border-left: 2px solid #c8ddf5;
+  margin-left: 20px; border-left: 2px solid #a5d6a7;
   padding-left: 12px; margin-bottom: 6px;
 }
 
@@ -419,9 +436,7 @@ body {
     <div class="site-header-name"><span>💸</span> MIND CASH</div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       ÉCRAN AUTH
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- ÉCRAN AUTH -->
   <div id="sAuth" class="scr on">
     <div class="logo-wrap">
       <div class="logo-ico">💸</div>
@@ -433,14 +448,12 @@ body {
         <button class="tab on" onclick="swTab('login')">Connexion</button>
         <button class="tab"    onclick="swTab('reg')">Inscription</button>
       </div>
-
       <!-- Connexion -->
       <div class="frm on" id="fLogin">
         <div class="fld"><label>Téléphone</label><input type="text" placeholder="0XXXXXXXXX" id="lPhone"></div>
         <div class="fld"><label>Mot de passe</label><input type="password" placeholder="••••••••" id="lPass"></div>
         <button class="btn-main" onclick="doLogin()">Se connecter</button>
       </div>
-
       <!-- Inscription -->
       <div class="frm" id="fReg">
         <div class="fld"><label>Nom complet</label><input type="text" placeholder="Jean Dupont" id="rName"></div>
@@ -461,9 +474,7 @@ body {
     <p class="hint-text">Un dépôt minimum de 5 000 FCFA est requis pour activer votre compte</p>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       ÉCRAN ACTIVATION
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- ÉCRAN ACTIVATION -->
   <div id="sActivate" class="scr">
     <div class="logo-wrap" style="margin-top:2rem">
       <div class="logo-ico">💸</div>
@@ -480,6 +491,8 @@ body {
         <div><span>Activation</span><strong>Après validation admin</strong></div>
       </div>
       <button class="btn-main" onclick="ouvrirDepotActivation()">💳 Faire le dépôt d'activation</button>
+      <!-- ✅ Bouton Boutique accessible même sans activation -->
+      <button class="btn-sec" style="border-color:var(--b400);color:var(--b600);font-weight:600;margin-top:8px" onclick="ouvrirBoutiquePublique()">🛒 Accéder à la boutique</button>
       <button class="btn-sec"  onclick="doLogout()">Se déconnecter</button>
     </div>
   </div>
@@ -493,7 +506,7 @@ body {
     <div class="topbar">
       <div class="topbar-info">
         <h2>Bonjour, <span id="uName">—</span> 👋</h2>
-        <p>Compte <span id="uStatus" style="color:#7fc97f">—</span> · ID: <span id="uID">—</span></p>
+        <p>Compte <span id="uStatus" style="color:#81C784">—</span> · ID: <span id="uID">—</span></p>
       </div>
       <div class="topbar-right">
         <div class="avatar" id="uAvatar">—</div>
@@ -593,9 +606,21 @@ body {
         <div id="adminTasks"></div>
       </div>
 
-      <!-- Page Boutique -->
+      <!-- ════════════════════════════════════════════════════════════════
+           Page Boutique — ACCESSIBLE À TOUS
+           ════════════════════════════════════════════════════════════════ -->
       <div class="pg" id="pgShop">
         <div class="sec-title">🛒 Boutique</div>
+
+        <!-- Bannière d'info pour comptes non-activés -->
+        <div class="shop-notice" id="shopNoticeInactive" style="display:none">
+          <span class="sn-ico">ℹ️</span>
+          <div>
+            <strong>Compte non activé</strong>
+            Vous pouvez voir les produits, mais l'achat requiert un compte actif (dépôt de 5 000 FCFA).
+          </div>
+        </div>
+
         <div id="shopList"></div>
         <div id="pagination" style="text-align:center;margin-top:10px"></div>
         <button class="btn-main" style="margin-top:8px" onclick="openAddProduct()">➕ Proposer un produit</button>
@@ -604,11 +629,11 @@ body {
       <!-- Page Parrainage -->
       <div class="pg" id="pgAffil">
         <div class="sec-title">Mon lien de parrainage</div>
-        <div onclick="copyLink()" style="background:var(--b50);border:1px solid #c8ddf5;border-radius:12px;padding:13px;font-size:13px;color:var(--b800);word-break:break-all;margin-bottom:12px;cursor:pointer">
+        <div onclick="copyLink()" style="background:var(--b50);border:1px solid #a5d6a7;border-radius:12px;padding:13px;font-size:13px;color:var(--b800);word-break:break-all;margin-bottom:12px;cursor:pointer">
           https://cashmind.pages.dev/?ref=<span id="refCode">—</span>
           <div style="font-size:11px;margin-top:4px;color:var(--b600);font-weight:600">👆 Appuyer pour copier</div>
         </div>
-        <div style="background:#fff;border:1px solid #e2eaf4;border-radius:14px;padding:12px 14px;margin-bottom:14px">
+        <div style="background:#fff;border:1px solid #c8e6c9;border-radius:14px;padding:12px 14px;margin-bottom:14px">
           <div style="font-size:13px;font-weight:600;color:var(--b800);margin-bottom:10px">Structure de rémunération</div>
           <div style="display:flex;gap:8px;margin-bottom:8px">
             <div style="flex:1;background:var(--b50);border-radius:10px;padding:10px;text-align:center">
@@ -622,7 +647,7 @@ body {
               <div style="font-size:11px;color:var(--am600)">Par filleul indirect</div>
             </div>
           </div>
-          <div style="font-size:12px;color:var(--gr600);background:#f8fafc;border-radius:8px;padding:8px">
+          <div style="font-size:12px;color:var(--gr600);background:#f8fcf8;border-radius:8px;padding:8px">
             Les gains sont crédités automatiquement quand votre filleul active son compte.
           </div>
         </div>
@@ -669,15 +694,11 @@ body {
 
   </div><!-- /sMain -->
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       MODAL — DÉPÔT D'ACTIVATION
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- MODAL DÉPÔT D'ACTIVATION -->
   <div class="moverlay" id="modActivate">
     <div class="mbox">
       <div class="mhandle"></div>
       <div class="mtitle">🔓 Dépôt d'activation</div>
-
-      <!-- Étape 1 : formulaire -->
       <div class="step on" id="aS1">
         <div style="text-align:center;margin-bottom:14px">
           <div class="mtn-badge">🟡 MTN MoMo</div>
@@ -699,8 +720,6 @@ body {
         <button class="btn-main" id="aBtnCreer" onclick="aCreerDepot()">Créer le dépôt</button>
         <button class="btn-sec" onclick="fermerModActivate()">Annuler</button>
       </div>
-
-      <!-- Étape 2 : instructions USSD -->
       <div class="step" id="aS2">
         <div style="text-align:center;margin-bottom:12px">
           <div style="font-size:15px;font-weight:700;color:var(--b800)">⏳ Dépôt en cours de création</div>
@@ -730,8 +749,6 @@ body {
         </button>
         <button class="btn-sec" onclick="fermerModActivate()">Annuler</button>
       </div>
-
-      <!-- Étape 3 : confirmation -->
       <div class="step" id="aS3">
         <div class="suc-ico">⏳</div>
         <p style="text-align:center;font-weight:700;font-size:16px;color:var(--b800);margin-bottom:6px">Dépôt soumis !</p>
@@ -747,15 +764,11 @@ body {
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       MODAL — RETRAIT
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- MODAL RETRAIT -->
   <div class="moverlay" id="modRetrait">
     <div class="mbox">
       <div class="mhandle"></div>
       <div class="mtitle">💳 Retrait</div>
-
-      <!-- Étape 1 -->
       <div class="step on" id="rS1">
         <div style="text-align:center;margin-bottom:14px">
           <div class="mtn-badge">🟡 MTN MoMo</div>
@@ -776,8 +789,6 @@ body {
         <button class="btn-main" onclick="doRetrait()">Demander le retrait</button>
         <button class="btn-sec"  onclick="fermerRetrait()">Annuler</button>
       </div>
-
-      <!-- Étape 2 -->
       <div class="step" id="rS2">
         <div class="suc-ico">⏳</div>
         <p style="text-align:center;font-weight:700;font-size:16px;color:var(--b800);margin-bottom:6px">Retrait soumis !</p>
@@ -795,9 +806,7 @@ body {
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       MODAL — DÉPÔT BOUTIQUE
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- MODAL DÉPÔT BOUTIQUE -->
   <div class="moverlay" id="modShopDeposit">
     <div class="mbox">
       <div class="mhandle"></div>
@@ -809,9 +818,7 @@ body {
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       MODAL — RETRAIT BOUTIQUE
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- MODAL RETRAIT BOUTIQUE -->
   <div class="moverlay" id="modShopWithdraw">
     <div class="mbox">
       <div class="mhandle"></div>
@@ -824,9 +831,7 @@ body {
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════════════════════════════════
-       MODAL — AJOUTER PRODUIT
-       ════════════════════════════════════════════════════════════════════ -->
+  <!-- MODAL AJOUTER PRODUIT -->
   <div class="moverlay" id="modProduct">
     <div class="mbox">
       <div class="mhandle"></div>
@@ -885,9 +890,9 @@ let aTimerIv = null;
 let pendingDepotNum = '', pendingDepotMt = 0;
 
 /* ── Boutique ── */
-let products     = [];
-let currentPage  = 1;
-const perPage    = 6;
+let products    = [];
+let currentPage = 1;
+const perPage   = 6;
 
 /* ──────────────────────────────────────────────────────────────────────────
    TOAST
@@ -950,13 +955,11 @@ function checkPassMatch() {
   if (p1 === p2) {
     msg.className = 'pass-match-msg ok';
     msg.textContent = '✅ Les mots de passe correspondent';
-    i2.className = 'input-ok'; i1.className = 'input-ok';
-    return true;
+    i2.className = 'input-ok'; i1.className = 'input-ok'; return true;
   } else {
     msg.className = 'pass-match-msg err';
     msg.textContent = '❌ Les mots de passe ne correspondent pas';
-    i2.className = 'input-error'; i1.className = '';
-    return false;
+    i2.className = 'input-error'; i1.className = ''; return false;
   }
 }
 
@@ -973,20 +976,16 @@ async function doRegister() {
   const pass  = document.getElementById('rPass').value;
   const pconf = document.getElementById('rPassConfirm').value;
   const ref   = document.getElementById('rRef').value.trim() || null;
-
   if (!name || !phone || !pass || !pconf) { toast('Remplis tous les champs obligatoires'); return; }
   if (pass !== pconf) { toast('❌ Les mots de passe ne correspondent pas'); document.getElementById('rPassConfirm').focus(); return; }
   if (pass.length < 6) { toast('Le mot de passe doit faire au moins 6 caractères'); return; }
-
   const { data, error } = await sb.auth.signUp({ email: phone + '@mindcash.app', password: pass });
   if (error) { toast(error.message); return; }
-
   let referredBy = null;
   if (ref) {
     const { data: ru } = await sb.from('users').select('id').eq('ref_code', ref).single();
     if (ru?.id) referredBy = ru.id; else toast('Code parrain invalide');
   }
-
   const refCode = 'MC-' + Math.floor(100000 + Math.random() * 899999);
   const { error: ie } = await sb.from('users').insert({
     id: data.user.id, name, phone, balance: 0, is_active: false,
@@ -1025,6 +1024,8 @@ async function loadUser() {
   if (!data.is_active) {
     document.getElementById('sMain').classList.remove('on');
     document.getElementById('sActivate').classList.add('on');
+    /* ✅ Charger les produits même pour les non-activés */
+    await loadProducts();
     return;
   }
 
@@ -1042,6 +1043,25 @@ async function loadUser() {
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
+   BOUTIQUE PUBLIQUE (depuis écran activation)
+   ────────────────────────────────────────────────────────────────────────── */
+function ouvrirBoutiquePublique() {
+  /* Passer vers l'écran sMain en mode "boutique seule" */
+  document.getElementById('sActivate').classList.remove('on');
+  document.getElementById('sMain').classList.add('on');
+
+  /* Masquer la topbar de solde pour les non-activés */
+  if (userData && !userData.is_active) {
+    const btnD = document.getElementById('btnDepotMain');
+    if (btnD) btnD.style.display = 'none';
+    setUserUI(userData.name, userData.phone, userData.ref_code, userData.is_active);
+  }
+
+  /* Afficher la page Boutique directement */
+  showPg('Shop');
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
    UI HELPERS
    ────────────────────────────────────────────────────────────────────────── */
 function updBal() {
@@ -1049,7 +1069,6 @@ function updBal() {
     bal.toLocaleString('fr-FR') + ' <span style="font-size:17px;font-weight:400">FCFA</span>';
   const p = document.getElementById('profBal');    if (p) p.textContent = bal.toLocaleString('fr-FR') + ' FCFA';
   const s = document.getElementById('soldeDispo'); if (s) s.textContent = bal.toLocaleString('fr-FR') + ' FCFA';
-  /* Solde boutique */
   const sbal = userData?.shop_balance || 0;
   const sb2  = document.getElementById('shopBal'); if (sb2) sb2.textContent = sbal.toLocaleString('fr-FR') + ' FCFA';
 }
@@ -1065,7 +1084,7 @@ function setUserUI(name, phone, refCode, isActive) {
   document.getElementById('uID').textContent        = refCode || '—';
   const sEl = document.getElementById('uStatus'), pEl = document.getElementById('profStatus');
   if (isActive) {
-    sEl.textContent = 'actif'; sEl.style.color = '#7fc97f';
+    sEl.textContent = 'actif'; sEl.style.color = '#81C784';
     pEl.innerHTML = '<span class="bdg bdg-g">Actif</span>';
   } else {
     sEl.textContent = 'inactif'; sEl.style.color = '#e24b4a';
@@ -1077,7 +1096,14 @@ function showPg(id) {
   document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
   document.querySelectorAll('.ni').forEach(n => n.classList.remove('on'));
   document.getElementById('pg' + id).classList.add('on');
-  document.getElementById('ni-' + id.toLowerCase()).classList.add('on');
+  const niEl = document.getElementById('ni-' + id.toLowerCase());
+  if (niEl) niEl.classList.add('on');
+
+  /* Afficher/masquer la bannière boutique selon statut */
+  if (id === 'Shop') {
+    const notice = document.getElementById('shopNoticeInactive');
+    if (notice) notice.style.display = (userData && !userData.is_active) ? 'flex' : 'none';
+  }
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -1104,10 +1130,8 @@ async function aCreerDepot() {
   const mt  = parseInt(document.getElementById('aMt').value);
   if (!num || !mt || isNaN(mt)) { toast('Remplis tous les champs'); return; }
   if (mt < DEPOT_MIN) { toast(`Minimum ${DEPOT_MIN.toLocaleString('fr-FR')} FCFA`); return; }
-
   const btn = document.getElementById('aBtnCreer');
   btn.disabled = true; btn.textContent = 'Création en cours…';
-
   try {
     const { data: res, error } = await sb.rpc('create_activation_deposit', {
       p_number: num, p_amount: mt
@@ -1194,12 +1218,10 @@ async function doRetrait() {
   const mt  = parseInt(document.getElementById('rMt').value);
   if (!num) { toast('Entre ton numéro MTN MoMo'); return; }
   if (!mt || isNaN(mt)) { toast('Entre un montant valide'); return; }
-
   const { data: res, error } = await sb.rpc('request_withdrawal', {
     p_number: num, p_amount: mt
   });
   if (error || !res?.success) { toast(res?.message || error?.message || 'Erreur retrait'); return; }
-
   bal -= mt; updBal();
   await sendTG(
     `💳 <b>DEMANDE DE RETRAIT</b>\n\n👤 <b>${userData.name}</b>\n📞 ${userData.phone}\n🆔 ${userData.ref_code}\n` +
@@ -1234,6 +1256,7 @@ function renderProducts() {
     container.innerHTML = '<p style="text-align:center;color:var(--gr600);padding:20px 0">Aucun produit disponible</p>';
     return;
   }
+  const isActive = userData?.is_active || false;
   container.innerHTML = pageItems.map(p => `
     <div class="card" style="margin-bottom:12px">
       ${p.cover ? `<img src="${p.cover}" style="width:100%;border-radius:10px 10px 0 0;max-height:180px;object-fit:cover">` : ''}
@@ -1242,7 +1265,10 @@ function renderProducts() {
           <div style="font-weight:600;font-size:14px">${p.title}</div>
           <div class="row-sub">${(p.price||0).toLocaleString('fr-FR')} FCFA</div>
         </div>
-        <button class="btn-main" style="width:auto;padding:8px 14px;margin-top:0" onclick="buyProduct('${p.id}','${p.link}')">Acheter</button>
+        ${isActive
+          ? `<button class="btn-main" style="width:auto;padding:8px 14px;margin-top:0" onclick="buyProduct('${p.id}','${p.link}')">Acheter</button>`
+          : `<button class="btn-main" style="width:auto;padding:8px 14px;margin-top:0;background:var(--gr600)" onclick="toast('Activez votre compte pour acheter')">🔒 Acheter</button>`
+        }
       </div>
     </div>
   `).join('');
@@ -1254,13 +1280,14 @@ function renderPagination() {
   const el = document.getElementById('pagination');
   if (totalPages <= 1) { el.innerHTML = ''; return; }
   el.innerHTML = Array.from({length: totalPages}, (_, i) =>
-    `<button onclick="goPage(${i+1})" style="margin:2px;padding:6px 12px;border-radius:8px;border:1px solid #dde4ee;background:${currentPage===i+1?'var(--b600)':'#fff'};color:${currentPage===i+1?'#fff':'#111'};cursor:pointer">${i+1}</button>`
+    `<button onclick="goPage(${i+1})" style="margin:2px;padding:6px 12px;border-radius:8px;border:1px solid #c8e6c9;background:${currentPage===i+1?'var(--b600)':'#fff'};color:${currentPage===i+1?'#fff':'#111'};cursor:pointer">${i+1}</button>`
   ).join('');
 }
 
 function goPage(p) { currentPage = p; renderProducts(); }
 
 async function buyProduct(id, link) {
+  if (!userData?.is_active) { toast('🔒 Activez votre compte pour acheter'); return; }
   const { data: res, error } = await sb.rpc('buy_product', { p_product_id: id });
   if (error || !res?.success) { toast(res?.message || 'Solde boutique insuffisant'); return; }
   window.open(link, '_blank');
@@ -1348,12 +1375,10 @@ async function loadStats() {
   const tg = (gains||[]).reduce((s,t) => s+(t.amount||0), 0);
   document.getElementById('statTotalGagne').textContent = tg.toLocaleString('fr-FR');
   document.getElementById('profTotalGagne').textContent = tg.toLocaleString('fr-FR') + ' FCFA';
-
   const { data: rets } = await sb.from('withdrawals').select('amount,status').eq('user_id', user.id).eq('status','success');
   const tr = (rets||[]).reduce((s,r) => s+(r.amount||0), 0);
   document.getElementById('statRetraits').textContent     = (rets||[]).length;
   document.getElementById('profTotalRetrait').textContent = tr.toLocaleString('fr-FR') + ' FCFA';
-
   const { data: n1 } = await sb.from('users').select('id').eq('referred_by', user.id);
   document.getElementById('statFilleuls').textContent = (n1||[]).length;
 }
@@ -1401,8 +1426,7 @@ async function doMissionLink(id, name, rewardStr, link) {
     if (el) el.classList.add('done');
     completedMissions.add(key); return;
   }
-  completedMissions.add(key);
-  bal += res.gain; updBal();
+  completedMissions.add(key); bal += res.gain; updBal();
   toast('+' + res.gain + ' FCFA — ' + name);
   const el = document.getElementById('tM'+key) || document.getElementById('tAa'+key) || document.getElementById('tAaa'+key);
   if (el) el.classList.add('done');
@@ -1418,7 +1442,7 @@ async function loadAds() {
   const { data: ads } = await sb.from('ads').select('*').eq('is_active', true).order('created_at', { ascending: false });
   const el = document.getElementById('adsList');
   if (!ads?.length) {
-    el.innerHTML = '<div style="text-align:center;color:var(--gr600);font-size:13px;padding:16px 0;background:#fff;border-radius:14px;border:1px solid #e2eaf4">Aucune publicité disponible</div>';
+    el.innerHTML = '<div style="text-align:center;color:var(--gr600);font-size:13px;padding:16px 0;background:#fff;border-radius:14px;border:1px solid #c8e6c9">Aucune publicité disponible</div>';
     return;
   }
   const { data: wt } = await sb.from('transactions').select('meta')
